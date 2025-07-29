@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Deslizar elemento */
+        @keyframes deslizar {
+            from {
+                transform: translateX(0)
+            }
+
+            to {
+                transform: translateX(200px);
+            }
+        }
+
+        .caja1 {
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            animation: deslizar 2s ease-in-out alternate;
+        }
+        /* Rotar elemento */
+        @keyframes rotar {
+            0% {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+
+        .caja2 {
+            width: 100px;
+            height: 100px;
+            background: blue;
+            animation: 
+                deslizar 2s  ease-in-out,
+                rotar 2s infinite linear;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="caja1">caja 1</div>
+    <div class="caja2">caja 2</div>
+    <div class="caja3">caja 3</div>
+    <div class="caja4">caja 4</div>
+    <div class="caja5">caja 5</div>
+</body>
+
+</html>

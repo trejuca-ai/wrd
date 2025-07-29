@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .caja {
+            position: relative;
+            width: 100px;
+            height: 40px;
+            background: lightgray;
+            border: 1px solid red;
+            margin: 10px 0;
+            padding: 10px;
+            top: 200px;
+            left: 40px;
+        }
+
+        .caja2 {
+            position: absolute;
+            width: 100px;
+            height: 40px;
+            background: lightskyblue;
+            border: 1px solid blue;
+            margin: 10px 0;
+            padding: 10px;
+            top: 200px;
+            left: 300px;
+        }
+
+        .absoluta {
+            position: absolute;
+            background: burlywood;
+            width: 200px;
+            height: 80px;
+            top: 150px;
+            left: 50px;
+        }
+
+        .contendor {
+            background-color: lightgreen;
+            position: relative;
+            width: 400px;
+            height: 300px;
+            border: 1px solid seagreen;
+            top: 200px;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ejemplo basico position: abosulte</h2>
+
+    <div class="contendor">
+        <div class="caja2">Caja normal</div>
+        <div class="absoluta">Caja con position absolute</div>
+        <div class="caja">Caja normal</div>
+    </div>
+    
+</body>
+</html>

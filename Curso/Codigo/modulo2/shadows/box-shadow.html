@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 80px;
+            background: lightgray;
+            border: 1px solid;
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+        .shadow1 {
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+            border-radius: 5px;
+            border: 1px solid;
+        }
+        
+        .shadow2 {
+            border: 1px solid;
+            border-radius: 15px;
+            box-shadow: 55px 15px 1px rgba(177, 27, 27, 0.4);
+        }
+        
+        .shadow3 {
+            border: 1px solid;
+            border-radius: 0 0 0 25px;
+            box-shadow: 5px 5px 5px rgba(27, 154, 177, 0.4),
+                        17px 17px 5px rgba(27, 177, 107, 0.4);               
+        }
+        .shadow4 {
+            box-shadow: 10px 10px 7px rgba(0, 128, 255, 0.4);
+        }
+        .shadow5 {
+            box-shadow: inset 10px 10px 7px rgba(0, 128, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="box shadow1">Sombra clasica</div>
+    <div class="box shadow2">Sombra extendida</div>
+    <div class="box shadow3">Sombra doble o varias sobras</div>
+    <div class="box shadow4">Sombra color duro o vibrante</div>
+    <div class="box shadow5">Sombra color duro o vibrante</div>
+    
+</body>
+</html>
