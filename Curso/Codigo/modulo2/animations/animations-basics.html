@@ -25,17 +25,57 @@
         }
         /* Rotar elemento */
         @keyframes rotar {
-            0% {transform: rotate(0deg);}
-            100% {transform: rotate(360deg);}
+            0% {transform: translateX(0px) rotate(0deg);}
+            100% {transform: translateX(100px) rotate(360deg);}
         }
 
         .caja2 {
             width: 100px;
             height: 100px;
             background: blue;
-            animation: 
-                deslizar 2s  ease-in-out,
-                rotar 2s infinite linear;
+            animation: rotar 2s linear;
+        }
+
+        /* Rotar elemento */
+        @keyframes zoom {
+            0% {transform: scale(1)}
+            100% {transform: scale(1.5)}
+        }
+
+        .caja3 {
+            width: 100px;
+            height: 100px;
+            background: rgb(0, 255, 213);
+            animation: zoom 1s ease-in-out;
+        }
+
+        /* Cambiar de colores */
+        @keyframes cambiar-color {
+            0% {background-color: red;}
+            50% {background-color: yellow;}
+            100% {background-color: green;}
+        }
+
+        .caja4 {
+            width: 100px;
+            height: 100px;
+            background: rgb(0, 255, 213);
+            animation: cambiar-color 1s ease-in-out;
+        }
+
+        /* Cambiar de colores */
+        @keyframes cambiar-posicion {
+            0% {transform: translateY(0)}
+            50% {transform: translateY(30px)}
+            100% {transform: translateY(0)}
+
+        }
+
+        .caja5 {
+            width: 100px;
+            height: 100px;
+            background: rgb(123, 255, 0);
+            animation: cambiar-posicion 1s infinite ease-in-out;
         }
     </style>
 </head>

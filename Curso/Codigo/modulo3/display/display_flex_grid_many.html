@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .tabla {
+            display: grid;
+            gap: 10px;
+        }
+
+        .fila1 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .fila2 {
+            grid-template-columns: 2fr 1fr 1fr;
+
+        }
+        .fila3 {
+            grid-template-columns: 1fr 2fr 3fr;
+        }
+
+        .fila {
+            margin-bottom: 20px;
+            grid-auto-rows: 30px; 
+        }
+
+        
+        .celda {
+            background-color: steelblue;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .fila2 .celda {
+            background-color: bisque;
+        }
+        .fila3 .celda {
+            background-color: gray;
+
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h2>Ejemplo de elementos con display flex</h2>
+    <div class="tabla fila fila1">
+        <div class="celda">1.1</div>
+        <div class="celda">1.2</div>
+        <div class="celda">1.3</div>
+    </div>
+    <div class="tabla fila fila2">
+        <div class="celda">2.1</div>
+        <div class="celda">2.2</div>
+        <div class="celda">2.3</div>
+    </div>
+    <div class="tabla fila fila3">
+        <div class="celda">3.1</div>
+        <div class="celda">3.2</div>
+        <div class="celda">3.3</div>
+    </div>
+</body>
+
+</html>
