@@ -1,6 +1,7 @@
 :root {
     --fuente: Arial, Helvetica, sans-serif;
 
+    --color-primario: #153c60;
     --color-boton-principal: #153c60;
     --color-boton-principal-hover: #052949;
     --color-boton-principal-claro-hover: #d3e7f8;

@@ -1,0 +1,104 @@
+
+.blog_blog {
+    position: relative;
+    margin-top: 4rem;
+}
+
+.blog {
+    text-align: center;
+}
+
+.blog_imagen {
+    position: absolute;
+    top: 8rem;
+    left: 11rem;
+    width: 20rem;
+    margin: 0 auto;
+}
+
+.blog_contenido {
+    margin-top: 13rem;
+    background-color: white;
+    padding: 6rem 2rem 2rem 2rem;
+    font-size: 1.3rem;
+
+}
+
+.blog_heading {
+    text-align: left;
+}
+
+.blog_nombre {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.blog_texto::before {
+    content: '';
+    display: inline-block;
+    background-image: url('../img/quote.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 3rem;
+    height: 3rem;
+}
+
+.entrada {
+    background-color: white;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    align-items: center;
+
+}
+
+.entrada_contenido, 
+.entrada_meta {
+    font-size: 1.3rem;
+}
+
+.entrada_imagen {
+    height: 25rem;
+    object-fit: cover;
+    width: 100%;
+    
+}
+
+@media (min-width: 768px) {
+    .entrada {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .entrada_imagen_contenedor {
+        grid-column: 1 / 3;
+    }
+
+    .entrada_contenido {
+        grid-column: 3 / 6;
+    }
+
+    .entrada_imagen {
+        height: 15rem;
+        width: 90%;
+        
+    }
+
+    .blog_blog {
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .blog_articulo {
+        grid-column: 2 / 4;
+    }
+
+    .blog_imagen {
+        left: 2rem;
+    }
+
+    .boton_blog {
+        display: inline-block;
+    }
+}
