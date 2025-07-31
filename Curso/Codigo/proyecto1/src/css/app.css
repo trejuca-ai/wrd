@@ -1,0 +1,47 @@
+:root {
+    --fuente: Arial, Helvetica, sans-serif;
+
+    --color-boton-principal: #153c60;
+    --color-boton-principal-hover: #052949;
+    --color-boton-principal-titulo: #548bbb;
+    --color-boton-principal-fondo: #ffffff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    background-color: #ccc;
+}
+
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.titulo_seccion {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.titulo_seccion > span {
+    font-weight: 700;
+}
+
+.titulo_seccion > span::after {
+    content: '';
+    display: block;
+    height: 0.8rem;
+    width: 20rem;
+    margin-top: 0.7rem;
+    background-image: 
+        linear-gradient(to right, 
+        var(--color-boton-principal-hover) 0%,
+        var(--color-boton-principal-titulo) 100%);
+    border-radius: 6px;
+}
