@@ -5,7 +5,7 @@
         url('../img/bm_cover.jpg');
     background-size: cover;
     background-position: center;
-    padding: 2rem 0;
+    padding: 3rem 0;
     position: relative;
 }
 
@@ -16,33 +16,32 @@
 }
 
 .logo {
-    width:15rem;
+    width:25rem;
 }
 
 .menu {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 5rem;
 }
 
 .menu > .menu_enlace {
     color: white;
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 .encabezado_informacion > .titulo_informacion {
     color: white;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
 
 .encabezado_informacion > .descripcion {
     color: white;
     display: none;
-    font-size: 1rem;
 }
 
 .encabezado_perfil {
@@ -56,35 +55,40 @@
     }
     .menu {
         flex-direction: row;
-        gap: 1rem;
+        gap: 1.6rem;
+        margin-top: 0rem;
     }
 
-    .encabezado_informacion > .titulo_informacion {
-        text-align: left;
-    }
-
+    
     .encabezado_informacion > .descripcion {
         display: block;
     }
-
+    
     .encabezado_perfil {
         display: block;
         position: absolute;
-        width: 15rem;
-        height: 11rem;
-        top: 9rem;
-        right: 2rem;
+        top: 25rem;
+        right: 5rem;
+        height: 17rem;
+        width: 22rem;
         border-radius: 15%;
     }
-
+    
+    .encabezado_informacion > .titulo_informacion {
+        text-align: left;
+        margin-top: 10rem;
+    }
     .encabezado_informacion {
-        max-width: 55%;
+        max-width: 50%;
     }
 }
 
 @media (min-width: 1200px) {
     .encabezado_informacion {
-        max-width: 75%;
+        max-width: 70%;
     }
 
+    .encabezado_perfil {
+        top: 22rem;
+    }
 }

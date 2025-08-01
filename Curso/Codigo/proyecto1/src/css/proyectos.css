@@ -1,25 +1,32 @@
 @import url('app.css');
 
+.proyectos_grid {
+    display: flex;
+    justify-content: center;
+}
+
 .proyectos {
-    margin-top: 3rem;
+    padding-top: 3rem;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
 }
 
-.proyectos>h3 {
+.proyectos > h3 {
     grid-column: 1 / -1;
 }
 
+
 .proyecto {
     background-color: rgb(250, 242, 233);
+    max-width: 95%;
+    width: 100%;
+    border-radius: 7px;
 }
 
-.proyecto>.proyecto_imagen {
+.proyecto > .proyecto_imagen {
     position: relative;
-    /* min-height: 25rem; */
     aspect-ratio: 10/6;
-
 }
 
 .proyectos_grid:nth-of-type(1) .proyecto_imagen {
@@ -59,11 +66,9 @@
 }
 
 .nombre_proyecto {
-    color: white;
     position: absolute;
-    /* padding-top: 1rem;
-    padding-left: 1rem; */
-    bottom: 0;
+    color: white;
+    bottom: -1rem;
     left: 1rem;
 }
 
@@ -78,5 +83,11 @@
 @media (min-width: 768px) {
     .proyectos {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .proyectos {
+        gap: 2rem;
+    }
+    .proyecto {
+        width: 95%;
     }
 }

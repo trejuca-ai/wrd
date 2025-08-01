@@ -10,7 +10,7 @@
 }
 
 html {
-    /* font-size: 62%; */
+    font-size: 62%;
     box-sizing: border-box;
 }
 
@@ -38,8 +38,7 @@ img {
 
 .titulo_seccion {
     font-weight: 400;
-    font-size: 1.2rem;
-    display: block;
+    margin-top: 6rem;
 }
 
 .titulo_seccion > span {
@@ -49,9 +48,9 @@ img {
 .titulo_seccion > span::after {
     content: '';
     display: block;
-    height: 0.8rem;
-    width: 20rem;
-    margin-top: 0.7rem;
+    height: 1rem;
+    width: 22rem;
+    margin-top: 1rem;
     background-image: 
         linear-gradient(to right, 
         var(--color-boton-principal-hover) 0%,
