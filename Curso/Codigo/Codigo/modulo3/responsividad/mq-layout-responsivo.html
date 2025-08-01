@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño de Página con Layout</title>
+    <style>
+        /* Estilos básicos para visualización, no parte de la estructura HTML */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex; /* Para centrar el contenedor principal si lo deseas */
+            justify-content: center; /* Para centrar el contenedor principal */
+            align-items: center; /* Para centrar el contenedor principal */
+            min-height: 100vh; /* Para que el body ocupe al menos toda la altura de la vista */
+            background-color: #f0f0f0;
+        }
+
+        .layout-container {
+            width: 90%; /* Ajusta el ancho según tus necesidades */
+            max-width: 1200px; /* Ancho máximo para el layout */
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            display: grid; /* Usamos CSS Grid para el layout principal */
+            grid-template-columns: 1fr 3fr 1fr; /* Izquierda, Centro, Derecha (proporciones) */
+            grid-template-rows: auto auto 1fr auto auto; /* Header, Banner, Main, Low, Footer */
+            gap: 10px; /* Espacio entre las áreas del grid */
+        }
+
+        /* Asignación de áreas a las celdas del grid */
+        .header {
+            grid-column: 1 / span 3; /* Ocupa las 3 columnas */
+            grid-row: 1;
+            background-color: gold;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .banner {
+            grid-column: 2 / span 1; /* Ocupa la columna central */
+            grid-row: 2;
+            background-color: #dc3545; /* Rojo */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .left-aside {
+            grid-column: 1;
+            grid-row: 2 / span 2; /* Ocupa la fila del banner y el main content */
+            background-color: #28a745; /* Verde */
+            padding: 20px;
+            text-align: center;
+            display: flex; /* Para centrar el contenido verticalmente */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .right-aside {
+            grid-column: 3;
+            grid-row: 2 / span 2; /* Ocupa la fila del banner y el main content */
+            background-color: brown; /* Amarillo */
+            padding: 20px;
+            text-align: center;
+            display: flex; /* Para centrar el contenido verticalmente */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-content {
+            grid-column: 2;
+            grid-row: 3;
+            background-color: #d9dde2; /* Azul */
+            padding: 20px;
+            /* text-align: center; */
+            display: flex; /* Para centrar el contenido verticalmente */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px; /* Altura mínima para visualizar */
+        }
+
+        .low-content {
+            grid-column: 2;
+            grid-row: 4;
+            background-color: #dc3545; /* Rojo (para simular el color del layout) */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer {
+            grid-column: 1 / span 3; /* Ocupa las 3 columnas */
+            grid-row: 5;
+            background-color: #007bff; /* Azul */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Estilos para el texto dentro de las secciones */
+        .layout-container > div {
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .header, .right-aside {
+            color: #333; /* Texto más oscuro para fondos claros */
+        }
+
+        /* Media Queries para Responsividad (ejemplo básico) */
+        @media (max-width: 768px) {
+            .layout-container {
+                grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+                grid-template-rows: auto auto auto auto auto auto auto; /* Reordenar filas */
+            }
+
+            .header {
+                grid-column: 1;
+                grid-row: 1;
+            }
+            .banner {
+                grid-column: 1;
+                grid-row: 2;
+            }
+            .left-aside {
+                grid-column: 1;
+                grid-row: 3; /* Ahora debajo del banner */
+            }
+            .main-content {
+                grid-column: 1;
+                grid-row: 4; /* Ahora debajo del left aside */
+            }
+            .low-content {
+                grid-column: 1;
+                grid-row: 5;
+            }
+            .right-aside {
+                grid-column: 1;
+                grid-row: 6; /* Ahora debajo del low content */
+            }
+            .footer {
+                grid-column: 1;
+                grid-row: 7;
+            }
+        }
+
+        .form-container {
+            background-color: white;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px 20px;
+        }
+
+
+        .form-group {
+            /* width: 100%; */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        input,
+        select {
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #084fcb;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-color: lightblue;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+
+            }
+
+            .form-container {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .full-width {
+                grid-column: span 1;
+                /* Ya no necesita ocupar 2 columnas */
+            }
+            input,
+            select {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                background-color: lightgreen;
+            }
+
+            .form-container {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <header class="header">
+            Header
+        </header>
+
+        <aside class="left-aside">
+            Left Aside
+        </aside>
+
+        <section class="banner">
+            Banner
+        </section>
+
+        <aside class="right-aside">
+            Right Aside
+        </aside>
+
+        <main class="main-content">
+            <div class="form-container">
+                <h2>Gestión de clientes</h2>
+                <form>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" name="apellido">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="direccion">Dirección</label>
+                            <input type="text" id="direccion" name="direccion">
+                        </div>
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad</label>
+                            <input type="text" id="ciudad" name="ciudad">
+                        </div>
+                        <div class="form-group">
+                            <label for="estado">Estado</label>
+                            <input type="text" id="estado" name="estado">
+                        </div>
+                        <div class="form-group">
+                            <label for="compania">Compañía</label>
+                            <input type="text" id="compania" name="compania">
+                        </div>
+                        <div class="form-group">
+                            <label for="correo">Correo</label>
+                            <input type="email" id="correo" name="correo">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Guardar</button>
+                </form>
+            </div>
+        
+        </main>
+
+        <footer class="footer">
+            Footer
+        </footer>
+    </div>
+
+</body>
+</html>

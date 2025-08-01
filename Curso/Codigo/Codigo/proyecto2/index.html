@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Empleados - Banco Mexico</title>
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/bootstrap/css/icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/bootstrap/css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg shadow-lg navbar-background navbar-dark">
+        <div class="container-fluid">
+            <a href="#">
+                <img src="./img/bm_logo.png" width="150" height="40">
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Reportes
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Configuracion
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+    <!-- fin navbar con menu -->
+
+
+    <div class="container mt-4">
+        <div class="shadow p-4 mb-4">
+            <h2 class="text-center text-primary mb-4">Gestion de empleados</h2>
+            <div class="d-flex justify-content-between mb-3">
+                <button class="btn btn-primary" id="nuevoEmpleadoBoton" data-bs-toggle="modal" data-bs-target="#modalEmpleado">
+                    <i class="bi bi-person-plus-fill me-2"></i> Nuevo empleado
+                </button>
+            </div>
+            <div id="listaEmpleados" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 mb-4 justify-content-center">
+
+            </div>
+        </div>
+    </div>
+    <!-- fin contenedor nuevo empleado -->
+
+    <div class="modal fade" id="modalEmpleado">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h3 class="modal-title">Agregar nuevo empleado</h3>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formularioEmpleado">
+                        <input type="hidden" id="empleadoId">
+                        <div class="container">
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="apellido" class="form-label">Apellido</label>
+                                    <input type="text" class="form-control" id="apellido">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="fechaNacimiento" class="form-label">Fecha nacimiento</label>
+                                    <input type="text" class="form-control" id="fechaNacimiento">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="departamento" class="form-label">Departamento</label>
+                                    <select class="form-select" id="departamento">
+                                        <option value="">Seleccione...</option>
+                                        <option value="Finanzas">Finanzas</option>
+                                        <option value="Informatica">Informatica</option>
+                                        <option value="Recursos Humanos">Recursos Humanos</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary" id="guardarEmpleado">Guardar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin modal nuevo empleado -->
+
+    <div class="modal fade" id="modalEmpleadoEliminar">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h3 class="modal-title">Confirmar eliminacion</h3>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Esta seguro que desea eliminar el registro?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" id="eliminarEmpleado">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- final modal eliminar empleado -->
+
+    <footer class="bg-secondary-subtle text-center text-md-start mt-5 p-4">
+        2025 Banco de Mexico. Todos los derechos reservados
+    </footer>
+
+
+    <script src="lib/bootstrap/jquery/jquery-3.7.1.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/bootstrap/jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/datepicker-config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

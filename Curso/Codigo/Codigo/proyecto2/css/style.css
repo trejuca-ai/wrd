@@ -1,0 +1,38 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar-background {
+    display: flex;
+    align-items: start;
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.5)),
+        linear-gradient(rgba(0,0,0,0.5)),
+        url('../img/bm_cover.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 15rem;
+}
+
+.card {
+    border-radius: 1rem;
+    border: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-img-top {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgb(101, 101, 168);
+    margin: 15px auto 10px auto;
+    display: block;
+}
+
+.card:hover {
+    transform: translateY(5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0, 0.5);
+}

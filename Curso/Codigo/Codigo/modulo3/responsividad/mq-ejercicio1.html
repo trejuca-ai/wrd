@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .desktop,
+        .tablet,
+        .smartphone {
+            display: none;
+        }
+
+        @media (min-width: 1025px) {
+            .desktop {
+                display: block;
+            }
+        }
+        @media (min-width: 481px) and (max-width: 1024px) {
+            .tablet {
+                display: block;
+            }
+        }
+        @media (max-width: 480px) {
+            .smartphone {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop">Estas en pc de escritorio</div>
+    <div class="tablet">Estas en una tablet</div>
+    <div class="smartphone">Estas en un smartphone</div>
+</body>
+</html>

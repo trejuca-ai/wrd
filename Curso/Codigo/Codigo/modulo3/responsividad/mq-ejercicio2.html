@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor-flexible {
+            display: flex;
+            border: 1px solid;
+            background-color: #ddd;
+            padding: 10px;
+        }
+        .elemento {
+            background-color: beige;
+            padding: 10px;
+        }
+        @media (max-width: 500px) {
+            .contenedor-flexible {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-flexible">
+        <div class="elemento">Estas en pc de escritorio</div>
+        <div class="elemento">Estas en una tablet</div>
+        <div class="elemento">Estas en un smartphone</div>
+    </div>
+</body>
+</html>

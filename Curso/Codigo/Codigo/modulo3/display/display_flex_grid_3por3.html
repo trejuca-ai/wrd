@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background-color: aqua;
+            border: 1px solid;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .elemento {
+            height: 20px;
+            background-color: lightcoral;
+            margin: 5px;
+        }
+
+        .elemento-encabezado {
+            /* grid-column: span 3; */
+            grid-column: 1 / 4;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Ejemplo de elementos con display flex</h2>
+    <div class="contenedor">
+        <div class="elemento elemento-encabezado">Encabezado</div>
+        <div class="elemento">Caja 1</div>
+        <div class="elemento">Caja 2</div>
+        <div class="elemento">Caja 3</div>
+        <div class="elemento">Caja 4</div>
+        <div class="elemento">Caja 5</div>
+    </div>
+</body>
+
+</html>
